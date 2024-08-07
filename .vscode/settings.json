@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "*.antlr": "antlr",
+        "vector": "cpp"
+    }
+}
