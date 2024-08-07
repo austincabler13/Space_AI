@@ -67,4 +67,4 @@ def detect_obstacles(frame):
             cv2.rectangle(frame, cv2.boundingRect(contour), (0, 255, 0), 2)
 
 if __name__ == '__main__':
-    app.run(debug=True)
+    app.run(debug=False)
