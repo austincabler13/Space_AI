@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Connect</title>
+    <link rel="stylesheet" href="/Main/static/styles.css">
+</head>
+<body>
+    <h1>Connect</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/connect">Connect</a></li>
+            <li><a href="/performance">Performance</a></li>
+            <li><a href="/report">Report</a></li>
+        </ul>
+    </nav>
+    <h2>Camera Feed</h2>
+    <img src="{{ url_for('video_feed') }}" width="640" height="480">
+</body>
+</html>

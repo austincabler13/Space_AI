@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Performance</title>
+    <link rel="stylesheet" href="/Main/static/styles.css">
+</head>
+<body>
+    <h1>Performance</h1>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/connect">Connect</a></li>
+            <li><a href="/performance">Performance</a></li>
+            <li><a href="/report">Report</a></li>
+        </ul>
+    </nav>
+    <h2>AI Performance</h2>
+    <ul>
+        {% for key, value in data.items() %}
+            <li>{{ key }}: {{ value }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>
