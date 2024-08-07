@@ -1,6 +1,0 @@
-{
-    "files.associations": {
-        "*.antlr": "antlr",
-        "cmath": "cpp"
-    }
-}
