@@ -1,0 +1,14 @@
+version: '3.8'
+
+services:
+  web:
+    build: .
+    ports:
+      - "80:5000"
+  db:
+    image: mysql:5.7
+    environment:
+      MYSQL_ROOT_PASSWORD: Cabler13$
+      MYSQL_DATABASE: spaceDatabase
+    ports:
+      - "3306:3306"

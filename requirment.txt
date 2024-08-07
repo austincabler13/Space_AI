@@ -1,0 +1,4 @@
+Flask
+psutil
+opencv-python
+mysql-connector-python
