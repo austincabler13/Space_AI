@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>Performance</title>
-    <link rel="stylesheet" href="/Main/static/styles.css">
+    <link rel="stylesheet" href="/static/styles.css">
 </head>
 <body>
     <h1>Performance</h1>
@@ -17,9 +17,26 @@
     </nav>
     <h2>AI Performance</h2>
     <ul>
-        {% for key, value in data.items() %}
-            <li>{{ key }}: {{ value }}</li>
-        {% endfor %}
+        <li>CPU Usage: <span id="cpu-usage">Loading...</span></li>
+        <li>Memory Usage: <span id="memory-usage">Loading...</span></li>
+        <li>Uptime: <span id="uptime">Loading...</span></li>
     </ul>
+    <script>
+        function fetchPerformanceData() {
+            fetch('/api/performance')
+                .then(response => response.json())
+                .then(data => {
+                    document.getElementById('cpu-usage').innerText = data.cpu_usage;
+                    document.getElementById('memory-usage').innerText = data.memory_usage;
+                    document.getElementById('uptime').innerText = data.uptime;
+                })
+                .catch(error => console.error('Error fetching performance data:', error));
+        }
+
+        // Fetch data every 5 seconds
+        setInterval(fetchPerformanceData, 3000);
+        // Fetch data immediately on load
+        fetchPerformanceData();
+    </script>
 </body>
 </html>
